@@ -7,6 +7,7 @@ const fileRouter = require("./routes/file.routes")
 const app = express();
 const PORT = config.get("serverPort");
 const corsMiddleware = require("./middleware/cors.middleware")
+const ClientInfo = require("./models/ClientInfo");
 
 
 
@@ -16,6 +17,23 @@ app.use(express.json())
 app.use(express.static('static'))
 app.use("/api/auth",authRouter);
 app.use("/api/files",fileRouter);
+
+
+app.post('/save-client-info', async (req, res) => {
+    const clientInfo = req.body;
+    console.log('Получена информация о клиенте:', clientInfo);
+
+    try {
+        // Сохранение информации о клиенте в базу данных
+        const newClientInfo = new ClientInfo(clientInfo);
+        await newClientInfo.save();
+        res.status(200).send('Информация о клиенте успешно сохранена');
+    } catch (error) {
+        console.error('Ошибка при сохранении информации о клиенте в базу данных:', error);
+        res.status(500).send('Ошибка при сохранении информации');
+    }
+});
+
 
 const start = async () => {
     try {

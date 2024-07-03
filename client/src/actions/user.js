@@ -2,6 +2,8 @@ import axios from "axios";
 import { setUser } from "../reducers/userReducer.js";
 import { API_URL } from "../config.js";
 
+
+
 // Действие для выполнения входа пользователя
 export const login = (email, password) => {
     return async (dispatch) => {
