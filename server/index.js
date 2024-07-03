@@ -1,23 +1,20 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const config = require("config");
-const fileUpload = require("express-fileupload")
-const authRouter = require("./routes/auth.routes")
-const fileRouter = require("./routes/file.routes")
+const express = require('express');
+const mongoose = require('mongoose');
+const config = require('config');
+const fileUpload = require('express-fileupload');
+const authRouter = require('./routes/auth.routes');
+const fileRouter = require('./routes/file.routes');
 const app = express();
-const PORT = config.get("serverPort");
-const corsMiddleware = require("./middleware/cors.middleware")
-const ClientInfo = require("./models/ClientInfo");
+const PORT = config.get('serverPort');
+const corsMiddleware = require('./middleware/cors.middleware');
+const ClientInfo = require('./models/ClientInfo');
 
-
-
-app.use(fileUpload({}))
-app.use(corsMiddleware)
-app.use(express.json())
-app.use(express.static('static'))
-app.use("/api/auth",authRouter);
-app.use("/api/files",fileRouter);
-
+app.use(fileUpload({}));
+app.use(corsMiddleware);
+app.use(express.json());
+app.use(express.static('static'));
+app.use('/api/auth', authRouter);
+app.use('/api/files', fileRouter);
 
 app.post('/save-client-info', async (req, res) => {
     const clientInfo = req.body;
@@ -34,11 +31,10 @@ app.post('/save-client-info', async (req, res) => {
     }
 });
 
-
 const start = async () => {
     try {
         console.log('Connecting to MongoDB...');
-        await mongoose.connect(config.get("dbUrl"), {
+        await mongoose.connect(config.get('dbUrl'), {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });
