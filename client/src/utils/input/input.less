@@ -1,0 +1,43 @@
+@import "../colors";
+
+input {
+  border: 2px solid @font-color; // Рамка вокруг всего input
+  background: transparent;
+  width: 100%;
+  padding: 3px;
+  transition: border-color 0.3s ease, transform 0.3s ease; // Добавляем плавный переход для transform
+
+  &:focus {
+    outline: none;
+    border-color: lighten(@font-color, 10%); // Увеличиваем светлоту при фокусе
+  }
+
+  &:hover {
+    transform: scale(1.01);
+    border-color: lighten(@font-color, 10%); // Увеличиваем светлоту при наведении
+  }
+}
+
+input::placeholder {
+  color: @font-color;
+  opacity: 1; // Устанавливаем непрозрачность плейсхолдера
+  font-weight: 700;
+}
+
+// Стилизация плейсхолдера для разных браузеров
+input::-webkit-input-placeholder {
+  color: @font-color;
+  font-weight: 700;
+}
+input:-ms-input-placeholder {
+  color: @font-color;
+  font-weight: 700;
+}
+input::-moz-placeholder {
+  color: @font-color;
+  font-weight: 700;
+}
+input:-moz-placeholder {
+  color: @font-color;
+  font-weight: 700;
+}

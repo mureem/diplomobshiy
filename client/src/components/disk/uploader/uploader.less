@@ -1,0 +1,116 @@
+@import "../../../utils/colors";
+
+.uploader {
+  height: 300px;
+  width: 350px;
+  position: fixed;
+  background-color: @font-color;
+  bottom: 10px;
+  right: 10px;
+  padding: 20px;
+  border-radius: 12px;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  &__close {
+    width: 24px;
+    height: 24px;
+    background-color: @add-color;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  &__close:hover {
+    background-color: darker @add-color ;
+  }
+}
+
+.upload-file {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin: 10px 0;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  &__name {
+    flex-grow: 1;
+    max-width: calc(100% - 40px); /* Оставляем место для кнопки "X" */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 10px;
+    font-size: 0.9rem;
+    color: #333;
+  }
+
+  &__remove {
+    width: 24px;
+    height: 24px;
+    background-color: @add-color;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  &__remove:hover {
+    background-color: #fe1d55;
+  }
+
+  &__progress-bar {
+    height: 8px;
+    border-radius: 4px;
+    background-color: #e0e0e0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__upload-bar {
+    background-color: #4caf50;
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.4s ease;
+  }
+
+  &__percent {
+    position: absolute;
+    width: 100%;
+    top: -20px;
+    left: 0;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #333;
+  }
+}

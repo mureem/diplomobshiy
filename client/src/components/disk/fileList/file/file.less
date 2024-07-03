@@ -1,0 +1,101 @@
+@import "../../../../utils/colors";
+
+.file {
+  margin: 10px 0;
+  text-decoration: none;
+  outline: none;
+  display: grid;
+  grid-template-columns: 1fr 4fr repeat(4, 1fr);
+  align-items: center;
+  position: relative;
+
+  &:hover {
+    transition: 0.4s;
+    transform: scale(1.003);
+    box-shadow: 0 0 0 1px #15406B, 0 0 0 2px #15406B;
+    padding: 4px;
+    margin: 3px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    border: 2px solid #15406B;
+    transition: border-color 0.3s;
+    pointer-events: none; /* Псевдоэлемент не будет блокировать мышиные события */
+    z-index: 0; /* Обеспечиваем, что псевдоэлемент находится под кнопками */
+  }
+
+  &:hover::before {
+    border-color: #15406B;
+  }
+
+  .file__img {
+    justify-self: center;
+  }
+
+  .file__date {
+    grid-column-start: 5;
+    justify-self: center;
+  }
+
+  .file__size {
+    grid-column-start: 6;
+    justify-self: center;
+  }
+
+  .file__btn {
+    display: none;
+    background: linear-gradient(to right, #15406B, #2E86C1);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+    z-index: 1; /* Кнопки отображаются поверх псевдоэлемента */
+  }
+
+  &:hover .file__date {
+    grid-column-start: 3;
+  }
+
+  &:hover .file__size {
+    grid-column-start: 4;
+  }
+
+  &:hover .file__download {
+    grid-column-start: 5;
+    display: block;
+    margin-left: 5px;
+    margin-right: 8px;
+  }
+
+  &:hover .file__delete {
+    grid-column-start: 6;
+    display: block;
+    margin-left: 5px;
+    margin-right: 8px;
+  }
+
+  &:hover .file__btn {
+    display: inline-block;
+  }
+
+  .file__btn:hover {
+    background: linear-gradient(to right, #2E86C1, #15406B);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+  }
+
+  .file__btn:active {
+    background: linear-gradient(to right, #1F4E79, #1C6EA4);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+  }
+}

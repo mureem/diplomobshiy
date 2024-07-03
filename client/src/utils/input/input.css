@@ -1,0 +1,37 @@
+input {
+  border: 2px solid #15406B;
+  background: transparent;
+  width: 100%;
+  padding: 3px;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+input:focus {
+  outline: none;
+  border-color: #1d5996;
+}
+input:hover {
+  transform: scale(1.01);
+  border-color: #1d5996;
+}
+input::placeholder {
+  color: #15406B;
+  opacity: 1;
+  font-weight: 700;
+}
+input::-webkit-input-placeholder {
+  color: #15406B;
+  font-weight: 700;
+}
+input:-ms-input-placeholder {
+  color: #15406B;
+  font-weight: 700;
+}
+input::-moz-placeholder {
+  color: #15406B;
+  font-weight: 700;
+}
+input:-moz-placeholder {
+  color: #15406B;
+  font-weight: 700;
+}
+/*# sourceMappingURL=input.css.map */

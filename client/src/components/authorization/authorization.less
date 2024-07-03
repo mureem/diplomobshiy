@@ -1,0 +1,52 @@
+@import "../../utils/colors";
+
+.authorization {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+
+  &__header {
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  input {
+    margin: 10px 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border-radius: 8px; // Добавляем закругленные углы для input
+  }
+
+  &__btn {
+    border: none;
+    background-color: @font-color;
+    border-radius: 8px;
+    color: @background-color;
+    font-weight: 700;
+    padding: 5px 10px;
+    align-self: flex-end;
+    margin-top: 10px;
+    &:hover {
+      background-color: lighten(@font-color, 15%);
+      transform: scale(1.03);
+      transition: 0.4s;
+    }
+    &:active {
+      background-color: darken(@font-color, 3%);
+      transform: scale(0.95);
+    }
+  }
+
+  input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+    transition: 0.4s;
+  }
+}

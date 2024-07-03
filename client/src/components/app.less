@@ -1,0 +1,28 @@
+@import "../utils/colors";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: @font-color;
+}
+
+body {
+  background-color: @background-color;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  background-color: @background-color;
+  min-height: 100vh; /* Чтобы .app занимал всю высоту экрана */
+  overflow: auto;
+}
+
+#root {
+  width: 100%;
+  background-color: @background-color;
+}
+

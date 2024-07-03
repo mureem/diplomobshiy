@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #15406B;
+}
+body {
+  background-color: #FFEFD5;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFEFD5;
+  min-height: 100vh;
+  /* Чтобы .app занимал всю высоту экрана */
+  overflow: auto;
+}
+#root {
+  width: 100%;
+  background-color: #FFEFD5;
+}
+/*# sourceMappingURL=app.css.map */

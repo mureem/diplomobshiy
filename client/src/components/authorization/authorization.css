@@ -1,0 +1,47 @@
+.authorization {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+.authorization__header {
+  font-size: 30px;
+  font-weight: 700;
+}
+.authorization input {
+  margin: 10px 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border-radius: 8px;
+}
+.authorization__btn {
+  border: none;
+  background-color: #15406B;
+  border-radius: 8px;
+  color: #FFEFD5;
+  font-weight: 700;
+  padding: 5px 10px;
+  align-self: flex-end;
+  margin-top: 10px;
+}
+.authorization__btn:hover {
+  background-color: #2266ab;
+  transform: scale(1.03);
+  transition: 0.4s;
+}
+.authorization__btn:active {
+  background-color: #12385e;
+  transform: scale(0.95);
+}
+.authorization input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+  transition: 0.4s;
+}
+/*# sourceMappingURL=authorization.css.map */

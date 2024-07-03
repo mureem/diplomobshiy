@@ -1,0 +1,104 @@
+.uploader {
+  height: 300px;
+  width: 350px;
+  position: fixed;
+  background-color: #15406B;
+  bottom: 10px;
+  right: 10px;
+  padding: 20px;
+  border-radius: 12px;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.uploader__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.uploader__title {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.uploader__close {
+  width: 24px;
+  height: 24px;
+  background-color: #C11540;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  line-height: 1;
+}
+.uploader__close:hover {
+  background-color: darker #C11540;
+}
+.upload-file {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin: 10px 0;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.upload-file__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.upload-file__name {
+  flex-grow: 1;
+  max-width: calc(100% - 40px);
+  /* Оставляем место для кнопки "X" */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 10px;
+  font-size: 0.9rem;
+  color: #333;
+}
+.upload-file__remove {
+  width: 24px;
+  height: 24px;
+  background-color: #C11540;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  line-height: 1;
+}
+.upload-file__remove:hover {
+  background-color: #fe1d55;
+}
+.upload-file__progress-bar {
+  height: 8px;
+  border-radius: 4px;
+  background-color: #e0e0e0;
+  position: relative;
+  overflow: hidden;
+}
+.upload-file__upload-bar {
+  background-color: #4caf50;
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+.upload-file__percent {
+  position: absolute;
+  width: 100%;
+  top: -20px;
+  left: 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #333;
+}
+/*# sourceMappingURL=uploader.css.map */

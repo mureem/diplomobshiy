@@ -1,0 +1,207 @@
+.disk {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.disk__btns {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 10px;
+  margin-bottom: 25px;
+}
+.disk__select {
+  margin-left: auto;
+  padding: 8px 12px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #15406B;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+.disk__select:hover {
+  background-color: #1d5996;
+}
+.disk__select:focus {
+  outline: none;
+  border-color: #0d2640;
+}
+.disk__select option {
+  color: #fff;
+  background-color: #15406B;
+}
+.disk__create {
+  margin-left: 10px;
+}
+.disk__upload-input {
+  display: none;
+}
+.disk__upload,
+.disk__back,
+.disk__create {
+  border: 2px solid transparent;
+  padding: 5px 7px;
+  cursor: pointer;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+.disk__upload:hover,
+.disk__back:hover,
+.disk__create:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.disk__upload {
+  color: #fff;
+  border-color: #15406B;
+}
+.disk__back {
+  color: #fff;
+  background-color: #C11540;
+  border-color: #C11540;
+}
+.disk__create {
+  color: #fff;
+  background-color: #15406B;
+  border-color: #15406B;
+}
+.drop-area {
+  width: 96%;
+  height: calc(100vh - 90px - 50px);
+  margin: 20px;
+  border: dashed #15406B 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: #15406B;
+}
+.popup {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup__content {
+  width: 400px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+.popup__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.popup__title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 78px;
+}
+.popup__close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #aaa;
+  transition: color 0.3s;
+}
+.popup__close:hover {
+  color: #666;
+}
+.popup__close:focus {
+  outline: none;
+}
+.popup__input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  transition: border-color 0.3s;
+}
+.popup__input:focus {
+  border-color: #15406B;
+  outline: none;
+}
+.popup__create {
+  padding: 10px 20px;
+  width: 150px;
+  background-color: #15406B;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 8px;
+  margin-left: 210px;
+  transition: background-color 0.3s;
+}
+.popup__create:hover {
+  background-color: #2E86C1;
+}
+.warn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  margin-left: 28%;
+  margin-top: 200px;
+  background-color: #f8d7da;
+  color: #C11540;
+  border: 1px solid #f5c6cb;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.loader {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 4px solid #15406B;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  margin-left: 45%;
+  margin-right: 45%;
+  margin-top: 200px;
+}
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-left: 4px solid #C11540;
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.7s linear infinite reverse;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=disk.css.map */

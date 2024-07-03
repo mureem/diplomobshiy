@@ -1,0 +1,7 @@
+{
+  "serverPort": 5000,
+  "dbUrl": "mongodb://localhost:27017/clouddb",
+  "secretKey": "A-08-20",
+  "filePath": "C:\\Users\\User\\WebstormProjects\\diplomnew\\server\\files",
+  "staticPath": "C:\\Users\\User\\WebstormProjects\\diplomnew\\server\\static"
+}

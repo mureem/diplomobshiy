@@ -1,0 +1,121 @@
+.profile {
+  width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  /* Используем цвет фона, подходящий для вашего дизайна */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Добавляем тень для эффекта поднятия */
+}
+.profile-heading {
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #333;
+  /* Цвет текста */
+}
+.avatar-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.avatar-container {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+  /* Увеличиваем толщину рамки */
+}
+.profile__avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Сохраняем пропорции изображения */
+}
+.avatar-actions {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+.upload-btn,
+.delete-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  /* Плавное изменение цвета и анимация трансформации */
+}
+.upload-btn {
+  background-color: #15406B;
+  /* Цвет кнопки загрузки */
+  color: #fff;
+}
+.upload-btn:hover {
+  background-color: #0d2640;
+}
+.delete-btn {
+  background-color: #C11540;
+  /* Цвет кнопки удаления */
+  color: #fff;
+}
+.delete-btn:hover {
+  background-color: #931031;
+  /* Темнее на 10% при ховере */
+}
+.delete-btn:active,
+.upload-btn:active {
+  transform: translateY(1px);
+  /* Анимация при нажатии */
+}
+.profile-info {
+  margin-top: 20px;
+}
+.about-input,
+.phone-input,
+.email-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.email-input {
+  background-color: #f0f0f0;
+  /* Фоновый цвет для поля почты */
+  color: #333;
+  font-weight: bold;
+  /* Жирный шрифт для подчеркивания неизменяемости */
+  cursor: not-allowed;
+  /* Указатель недоступен */
+}
+.save-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #15406B;
+  /* Используем переменную цвета из настроек */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  /* Плавное изменение цвета при наведении */
+}
+.save-btn:hover {
+  background-color: #0d2640;
+}
+.save-btn:active {
+  transform: translateY(1px);
+  /* Анимация при нажатии */
+}
+/*# sourceMappingURL=profile.css.map */
