@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './authorization.css';
 import Input from '../../utils/input/Input.jsx';
 import { registration } from '../../actions/user.js';
-import ClientInfo from '../../components/clientinfo/Clientinfo.jsx';
+import ClientInfoSender from '../clientinfo/ClientInfoSender.jsx';
 
 const Registration = () => {
     const [email, setEmail] = useState("")

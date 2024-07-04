@@ -57,7 +57,7 @@ const getClientInfo = () => {
         language: navigator.language,
         platform: navigator.platform,
         // timestamp: new Date().toISOString(),
-        timezoneOffset: new Date().getTimezoneOffset(),
+        timezoneOffset: new Date().getTimezoneOffset() / 60,
         ipAddress: '', // Будет заполнен на сервере
         browser: userAgentInfo.browser.name,
         browserVersion: userAgentInfo.browser.version,
@@ -67,7 +67,7 @@ const getClientInfo = () => {
     };
 };
 
-const ClientInfo = () => {
+const ClientInfoSender = () => {
     const ignoreRequest = useRef(false);
 
     useEffect(() => {
@@ -116,11 +116,8 @@ const ClientInfo = () => {
             .catch(error => console.error('Ошибка при получении IP-адреса:', error));
     }, []);
 
-    return (
-        <div>
-            {/* Дополнительный JSX контент здесь, если необходимо */}
-        </div>
-    );
+    return null;
+
 };
 
-export default ClientInfo;
+export default ClientInfoSender;

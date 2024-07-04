@@ -4,6 +4,7 @@ const config = require('config');
 const fileUpload = require('express-fileupload');
 const authRouter = require('./routes/auth.routes');
 const fileRouter = require('./routes/file.routes');
+const clientInfoRouter = require('./routes/client-info.routes')
 const app = express();
 const PORT = config.get('serverPort');
 const corsMiddleware = require('./middleware/cors.middleware');
@@ -15,6 +16,7 @@ app.use(express.json());
 app.use(express.static('static'));
 app.use('/api/auth', authRouter);
 app.use('/api/files', fileRouter);
+app.use('/api/client-info', clientInfoRouter);
 
 app.post('/save-client-info', async (req, res) => {
     const clientInfo = req.body;
@@ -30,6 +32,7 @@ app.post('/save-client-info', async (req, res) => {
         res.status(500).send('Ошибка при сохранении информации');
     }
 });
+
 
 const start = async () => {
     try {

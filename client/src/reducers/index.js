@@ -5,12 +5,14 @@ import userReducer from "./userReducer.js";
 import fileReducer from "./fileReducer.js";
 import uploadReducer from "./uploadReducer.js";
 import appReducer from "./appReducer.js"
+import clientInfoReducer from "./clientInfoReducer.js";
 
 const rootReducer = combineReducers({
     user: userReducer,
     files: fileReducer,
     upload: uploadReducer,
-    app: appReducer
+    app: appReducer,
+    clientInfo: clientInfoReducer
 })
 
 export const store = createStore(
